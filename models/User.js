@@ -8,7 +8,7 @@ const userSchema = mongoose.Schema(
     password: { type: String, required: true },
     phone: { type: String },
     age: { type: Number, required: true },
-    gender: { type: String, enum: ['Male', 'Female', 'Other'], required: true },
+    gender: { type: String, enum: ['male', 'female', 'other'], required: true },
     otp: { type: String }, 
     isVerified: { type: Boolean, default: false },
 

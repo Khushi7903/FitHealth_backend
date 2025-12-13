@@ -10,7 +10,13 @@ dotenv.config();
 connectDB();
 
 const app = express();
-app.use(cors());
+
+// ✅ Allow frontend at localhost:5173
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true,
+}));
+
 app.use(bodyParser.json());
 
 // Routes
